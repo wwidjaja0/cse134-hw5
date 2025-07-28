@@ -1,0 +1,442 @@
+@font-face {
+    font-family: "DM Sans";
+    src: url("../fonts/DMSans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    /* Colors */
+    --background-color: linear-gradient(45deg, rgba(28, 28, 28, 1) 0%, rgba(59, 68, 92, 1) 100%);
+    --surface-color: transparent;
+    --surface-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    --text-color: #ffffff;
+    --text-shadow: 2px 2px rgb(0, 0, 0);
+    --primary-color: #baffe7;
+    --accent-color: #ff0059;
+    /* Fonts */
+    --ff: "DM Sans", sans-serif;
+    --big-text-size: 2.5rem;
+    --big-text-style: bold;
+    --big-line-height: 1;
+    --small-text-size: 1rem;
+    --small-line-height: 2;
+    --small-text-style: medium;
+}
+
+* {
+    font-family: var(--ff, sans-serif);
+    font-size: var(--small-text-size, 1rem);
+    font-weight: var(--small-text-style, normal);
+    line-height: var(--small-line-height, 2);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "header main";
+    min-height: 100vh;
+    height: 100vh;
+    height: 100dvh;
+    background: var(--background-color, #1c1c1c);
+    color: var(--text-color, #ffffff);
+    text-shadow: var(--text-shadow, 2px 2px 5px rgb(68, 255, 189));
+
+    a:not([id="brand"]) {
+        transition: background-color 1s ease-in, color 1s ease-in;
+        background-color: transparent;
+        color: var(--primary-color, #baffe7);
+
+        &:hover {
+            transition: background-color 0.1s ease-out, color 0.1s ease-out;
+            background-color: var(--accent-color, #ff0059);
+            color: var(--text-color, #ffffff);
+        }
+    }
+
+    a:is([id="brand"]) {
+        color: var(--text-color, #ffffff);
+
+        img {
+            transition: transform 1s ease;
+
+            &:hover {
+                transition: transform 0.2s ease-in-out;
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    &>header {
+        grid-area: header;
+        position: sticky;
+        background-color: var(--surface-color, transparent);
+        padding: 0 1.5rem;
+
+        border-right: 1px dashed var(--text-color, #ffffff);
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                text-decoration: none;
+
+                &>span {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: var(--big-text-size, 2.5rem);
+                    font-weight: var(--big-text-style, bold);
+                    line-height: var(--big-line-height, 1);
+                }
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                padding: 2rem 0;
+
+                list-style: none;
+                text-align: center;
+
+                li {
+                    margin: 0.5rem 0;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+            }
+
+            label {
+                display: none;
+            }
+        }
+    }
+
+    &>main {
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+
+        /* Main content area */
+        &>div {
+            will-change: opacity;
+            flex: 1;
+            overflow-y: auto;
+            margin: auto;
+            padding: 1rem 2rem;
+            width: 90%;
+            max-width: 800px;
+
+            h3 {
+                margin: 1.5rem 0;
+            }
+
+            p {
+                margin: 0.5rem 0;
+            }
+
+            main-header {
+                margin: 2rem;
+
+                hgroup {
+                    margin: 5rem 0;
+
+                    h2 {
+                        margin: 0 1rem;
+                    }
+                }
+
+                &:hover {
+                    transition: transform 0.2s ease-in-out;
+                    transform: scale(1.05);
+                }
+            }
+
+            hgroup {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        &>footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+
+            background-color: var(--surface-color, transparent);
+            border-top: 1px dashed var(--text-color, #ffffff);
+
+            nav ul {
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+                gap: 1rem;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--ff, serif);
+    font-size: var(--big-text-size, 2.5rem);
+    font-weight: var(--big-text-style, bold);
+    line-height: var(--big-line-height, 1);
+}
+
+h4 {
+    font-weight: bold;
+    margin: 1rem 0;
+
+    &::before {
+        content: "•-> ";
+        color: var(--primary-color, #baffe7);
+    }
+
+    &::after {
+        content: " <-•";
+        color: var(--primary-color, #baffe7);
+    }
+}
+
+/* Ensure h1 inside nav, section, article, aside has a consistent font size */
+nav h1,
+section h1,
+article h1,
+aside h1 {
+    font-size: 2.5rem;
+}
+
+li {
+    list-style-position: inside;
+}
+
+/* Fallback for nested lists */
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+    padding-left: 2rem;
+}
+
+/* Give nested lists an indent */
+:is(ul, ol) :is(ul, ol) {
+    padding-left: 2rem;
+}
+
+#profile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: var(--surface-color, transparent);
+    box-shadow: var(--surface-shadow, 5px 5px 10px rgba(0, 0, 0, 0.5));
+    border-radius: 1rem;
+    padding: 1rem;
+
+    img {
+        border: 1px solid var(--text-color, #ffffff);
+        border-radius: 0.5rem;
+    }
+
+    picture>source {
+        visibility: hidden;
+    }
+
+    animation-name: profileCard;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+.wishlist {
+    list-style: none;
+
+    li a {
+        transition: background-color 1s ease-in, color 1s ease-in;
+        background-color: transparent;
+        color: var(--primary-color, #baffe7);
+        display: block;
+
+        &:hover {
+            transition: background-color 0.1s ease-out, color 0.1s ease-out;
+            background-color: var(--accent-color, #ff0059);
+            color: var(--text-color, #ffffff);
+        }
+    }
+}
+
+@keyframes profileCard {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2a2a33;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color, #baffe7);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color, #ff0059);
+}
+
+@media screen and (min-width: 1200px) {
+    :root {
+        --big-text-size: 2.5rem;
+        --small-text-size: 1.05rem;
+        --small-line-height: 2;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        &>main {
+            &>div {
+                width: 100%;
+            }
+        }
+    }
+
+    #profile {
+        flex-direction: column;
+        text-align: center;
+
+        &>section * {
+            margin: 0;
+        }
+
+        &>section h3 {
+            margin: 1rem 0;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --big-text-size: 2rem;
+        --small-text-size: 1.1rem;
+        --small-line-height: 2;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+
+        &>header {
+            border-right: 0;
+            border-bottom: 1px dashed var(--text-color, #ffffff);
+
+            nav {
+                justify-content: space-between;
+                padding: 1rem 0;
+
+                label {
+                    display: flex;
+                }
+
+                bottom-nav {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .menu {
+                    display: none;
+                }
+
+                .hamburger {
+                    display: inline-block;
+                    cursor: pointer;
+                    margin-top: 1rem;
+                }
+
+                #menu-toggle:checked~.menu {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    --small-text-size: 1.3rem;
+                }
+
+                /* style SVG bars */
+                .hamburger svg rect {
+                    fill: #fff;
+                    transition: opacity 0.2s;
+                }
+
+                #menu-toggle:checked+.hamburger svg rect:nth-child(2) {
+                    opacity: 0;
+                }
+            }
+        }
+
+        &>main {
+            main-header hgroup {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &>div {
+                padding: 1rem;
+            }
+        }
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-color: linear-gradient(20deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 70%, rgb(68, 255, 189) 100%);
+        --surface-color: #ffffff;
+        --text-color: #000000;
+        --primary-color: #ff009d;
+        --accent-color: #44ffbd;
+        --text-shadow: 0;
+    }
+}
