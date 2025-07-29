@@ -25,6 +25,27 @@
     --small-text-style: medium;
 }
 
+:root[data-theme="light"] {
+    --background-color: linear-gradient(20deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 70%, rgb(68, 255, 189) 100%);
+    --surface-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #ff009d;
+    --accent-color: #44ffbd;
+    --text-shadow: 0;
+}
+
+/* Auto-detect system preference as fallback if no js */
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme]) {
+        --background-color: linear-gradient(20deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 70%, rgb(68, 255, 189) 100%);
+        --surface-color: #ffffff;
+        --text-color: #000000;
+        --primary-color: #ff009d;
+        --accent-color: #44ffbd;
+        --text-shadow: 0;
+    }
+}
+
 * {
     font-family: var(--ff, sans-serif);
     font-size: var(--small-text-size, 1rem);
@@ -249,6 +270,22 @@ ol ol {
     padding-left: 2rem;
 }
 
+button {
+    background-color: var(--accent-color, #ff0059);
+    color: var(--text-color, #ffffff);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin: 1.5rem;
+    cursor: pointer;
+    display: flex;
+
+    &:hover {
+        background-color: var(--primary-color, #baffe7);
+        color: var(--text-color, #ffffff);
+    }
+}
+
 /* Give nested lists an indent */
 :is(ul, ol) :is(ul, ol) {
     padding-left: 2rem;
@@ -407,7 +444,7 @@ ol ol {
 
                 /* style SVG bars */
                 .hamburger svg rect {
-                    fill: #fff;
+                    fill: var(--text-color, #ffffff);
                     transition: opacity 0.2s;
                 }
 
@@ -427,16 +464,5 @@ ol ol {
                 padding: 1rem;
             }
         }
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --background-color: linear-gradient(20deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 70%, rgb(68, 255, 189) 100%);
-        --surface-color: #ffffff;
-        --text-color: #000000;
-        --primary-color: #ff009d;
-        --accent-color: #44ffbd;
-        --text-shadow: 0;
     }
 }

@@ -37,7 +37,9 @@
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
         <link rel="stylesheet" href="assets/css/main.css" media="screen">
+        <link rel="stylesheet" href="assets/css/work.css" media="screen">
         <link rel="manifest" href="assets/icons/site.webmanifest">
+        <script src="scripts/main.js" defer></script>
         <style>
             /* to avoid "Default styles for h1 elements are changing" */
             h1 {
@@ -50,7 +52,8 @@
             <nav>
                 <top-nav>
                     <a id="brand" href="/">
-                        <img src="/favicon.ico" alt="Widjaja's Logo" width="48px"
+                        <img src="/favicon.ico" alt="Widjaja's Logo"
+                            width="48px"
                             height="48px">
                         <h1 hidden>William Widjaja</h1>
                         <span><span>William</span> Widjaja</span>
@@ -73,6 +76,10 @@
                         <li><a href="now.html">now</a></li>
                         <li><a href="contact.html">contact</a></li>
                         <li><a href="work.html">work</a></li>
+                        <button type="button" hidden data-theme-toggle>
+                            <img src="assets/icons/sun.svg"
+                                alt="Theme change button">
+                        </button>
                     </ul>
                 </bottom-nav>
             </nav>
@@ -103,18 +110,84 @@
                     </search>
                 </form>
                 <section>
-                    <h3>Current</h3>
-                    <p>This is a placeholder, there is a hidden template for a
-                        card
-                        below me.</p>
-                    <template>
-                        <h4>Title</h4>
-                        <p>Description goes here.</p>
-                        <img src alt>
-                        <div>
-                            <p>Categories go here.</p>
-                        </div>
-                    </template>
+                    <project-card>
+                        <a href="#project1">
+                            <picture>
+                                <source srcset media="(min-width: 800px)">
+                                <source srcset media="(min-width: 400px)">
+                                <img src alt="AI Machine Learning Dashboard">
+                            </picture>
+                            <div>
+                                <ul>
+                                    <li>AI</li>
+                                    <li>Web</li>
+                                </ul>
+                            </div>
+                            <h3>Smart Analytics Dashboard</h3>
+                            <p>A comprehensive machine learning dashboard built
+                                with Python and React, featuring real-time data
+                                visualization and predictive analytics.</p>
+                        </a>
+                    </project-card>
+
+                    <project-card>
+                        <a href="#project2">
+                            <picture>
+                                <source srcset media="(min-width: 800px)">
+                                <source srcset media="(min-width: 400px)">
+                                <img src alt="Music Streaming Application">
+                            </picture>
+                            <div>
+                                <ul>
+                                    <li>Music</li>
+                                    <li>Web</li>
+                                </ul>
+                            </div>
+                            <h3>Harmony Stream</h3>
+                            <p>A modern music streaming platform with
+                                personalized playlists, social features, and
+                                high-quality audio playback using Web Audio
+                                API.</p>
+                        </a>
+                    </project-card>
+
+                    <project-card>
+                        <a href="#project3">
+                            <picture>
+                                <source srcset media="(min-width: 800px)">
+                                <source srcset media="(min-width: 400px)">
+                                <img src alt="Portfolio Website">
+                            </picture>
+                            <div>
+                                <ul>
+                                    <li>Web</li>
+                                </ul>
+                            </div>
+                            <h3>Interactive Portfolio</h3>
+                            <p>A responsive portfolio website showcasing
+                                creative projects with smooth animations and
+                                modern design principles.</p>
+                        </a>
+                    </project-card>
+
+                    <project-card>
+                        <a href="#project4">
+                            <picture>
+                                <source srcset media="(min-width: 800px)">
+                                <source srcset media="(min-width: 400px)">
+                                <img src alt="Task Management App">
+                            </picture>
+                            <div>
+                                <ul>
+                                    <li>Other</li>
+                                </ul>
+                            </div>
+                            <h3>TaskFlow Mobile</h3>
+                            <p>Cross-platform task management application built
+                                with React Native, featuring offline sync and
+                                collaborative workspaces.</p>
+                        </a>
+                    </project-card>
                 </section>
             </div>
             <footer>

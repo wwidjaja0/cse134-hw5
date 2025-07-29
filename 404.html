@@ -8,8 +8,6 @@
         <meta name="title" content="uh oh">
         <meta name="description"
             content="uh oh. i made an oopsie">
-        <link rel="preload" href="assets/fonts/DMSans-Regular.ttf" as="font"
-            type="font/ttf" crossorigin="anonymous">
 
         <!-- Open Graph -->
         <meta property="og:url" content="https://wwidjaja.dev/">
@@ -38,6 +36,9 @@
 
         <link rel="stylesheet" href="assets/css/main.css" media="screen">
         <link rel="manifest" href="assets/icons/site.webmanifest">
+        <link rel="preload" href="assets/fonts/DMSans-Regular.ttf" as="font"
+            type="font/ttf" crossorigin="anonymous">
+        <script src="scripts/main.js" defer></script>
         <style>
             /* to avoid "Default styles for h1 elements are changing" */
             h1 {
@@ -50,7 +51,8 @@
             <nav>
                 <top-nav>
                     <a id="brand" href="/">
-                        <img src="/favicon.ico" alt="Widjaja's Logo" width="48px"
+                        <img src="/favicon.ico" alt="Widjaja's Logo"
+                            width="48px"
                             height="48px">
                         <h1 hidden>William Widjaja</h1>
                         <span><span>William</span> Widjaja</span>
@@ -73,6 +75,10 @@
                         <li><a href="now.html">now</a></li>
                         <li><a href="contact.html">contact</a></li>
                         <li><a href="work.html">work</a></li>
+                        <button type="button" hidden data-theme-toggle>
+                            <img src="assets/icons/sun.svg"
+                                alt="Theme change button">
+                        </button>
                     </ul>
                 </bottom-nav>
             </nav>
@@ -114,6 +120,9 @@
                 </nav>
                 <p>&copy; 2025 William Widjaja</p>
                 <p>"Program received signal SIGSEGV, Segmentation fault."</p>
+                <noscript>This website's theme already automatically switches
+                    based on system preferences even though JavaScript is
+                    disabled.</noscript>
             </footer>
         </main>
     </body>
