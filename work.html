@@ -1,207 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Primary Meta Tags -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>work • will widjaja</title>
-        <meta name="title" content="wid's work">
-        <meta name="description"
-            content="A collection of my past work and projects.">
-        <link rel="preload" href="assets/fonts/DMSans-Regular.ttf" as="font"
-            type="font/ttf" crossorigin="anonymous">
 
-        <!-- Open Graph -->
-        <meta property="og:url" content="https://wwidjaja.dev/">
-        <meta property="og:title" content="wid's work">
-        <meta property="og:description"
-            content="A collection of my past work and projects.">
-        <meta property="og:image"
-            content="https://wwidjaja.dev/assets/imgs/opengraph.png">
+<head>
+    <!-- Primary Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>work • will widjaja</title>
+    <meta name="title" content="wid's work">
+    <meta name="description" content="A collection of my past work and projects.">
+    <link rel="preload" href="assets/fonts/DMSans-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-        <!-- X (Twitter) -->
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:title" content="wid's work">
-        <meta property="twitter:description"
-            content="A collection of my past work and projects.">
-        <meta property="twitter:image"
-            content="https://wwidjaja.dev/assets/imgs/opengraph.png">
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://wwidjaja.dev/">
+    <meta property="og:title" content="wid's work">
+    <meta property="og:description" content="A collection of my past work and projects.">
+    <meta property="og:image" content="https://wwidjaja.dev/assets/imgs/opengraph.png">
 
-        <!-- Icons -->
-        <link rel="apple-touch-icon" sizes="180x180"
-            href="assets/icons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32"
-            href="assets/icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16"
-            href="assets/icons/favicon-16x16.png">
-        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="wid's work">
+    <meta property="twitter:description" content="A collection of my past work and projects.">
+    <meta property="twitter:image" content="https://wwidjaja.dev/assets/imgs/opengraph.png">
 
-        <link rel="stylesheet" href="assets/css/main.css" media="screen">
-        <link rel="stylesheet" href="assets/css/work.css" media="screen">
-        <link rel="manifest" href="assets/icons/site.webmanifest">
-        <script src="scripts/main.js" defer></script>
-        <style>
-            /* to avoid "Default styles for h1 elements are changing" */
-            h1 {
-                font-size: 2.5rem;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/main.css" media="screen">
+    <link rel="stylesheet" href="assets/css/work.css" media="screen">
+    <link rel="manifest" href="assets/icons/site.webmanifest">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/work.js" defer></script>
+    <style>
+        /* to avoid "Default styles for h1 elements are changing" */
+        h1 {
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <top-nav>
+                <a id="brand" href="/">
+                    <img src="/favicon.ico" alt="Widjaja's Logo" width="48px" height="48px">
+                    <h1 hidden>William Widjaja</h1>
+                    <span><span>William</span> Widjaja</span>
+                </a>
+            </top-nav>
+            <bottom-nav>
+                <input type="checkbox" id="menu-toggle" hidden>
+                <label for="menu-toggle" class="hamburger" aria-label="Toggle menu">
+                    <svg viewBox="0 0 100 40" width="30" height="30" aria-hidden="true">
+                        <rect width="100" height="10"></rect>
+                        <rect y="30" width="100" height="10"></rect>
+                        <rect y="60" width="100" height="10"></rect>
+                    </svg>
+                </label>
+                <ul class="menu">
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="garden.html">garden</a></li>
+                    <li><a href="now.html">now</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="work.html">work</a></li>
+                    <button type="button" hidden data-theme-toggle>
+                        <img src="assets/icons/sun.svg" alt="Theme change button">
+                    </button>
+                </ul>
+            </bottom-nav>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <main-header>
+                <h2>/work</h2>
+                <p>Here is a collection of my past works and projects.</p>
+            </main-header>
+            <form method="GET">
+                <search>
+                    <label for="search-box">Search by title</label>
+                    <input id="search-box" name="query" type="search" placeholder="Look for a project...">
+                    <fieldset>
+                        <legend>Filter by tags</legend>
+                        <label><input type="checkbox" name="tags" value="web">Web</label>
+                        <label><input type="checkbox" name="tags" value="ai">AI</label>
+                        <label><input type="checkbox" name="tags" value="music">Music</label>
+                        <label><input type="checkbox" name="tags" value="other">Other</label>
+                    </fieldset>
+                    <button type="submit">Search</button>
+                </search>
+            </form>
+            <section>
+                <button id="load-local">Load Local</button>
+                <button id="load-remote">Load Remote</button>
+                <div id="projects"></div>
+            </section>
+        </div>
+        <footer>
             <nav>
-                <top-nav>
-                    <a id="brand" href="/">
-                        <img src="/favicon.ico" alt="Widjaja's Logo"
-                            width="48px"
-                            height="48px">
-                        <h1 hidden>William Widjaja</h1>
-                        <span><span>William</span> Widjaja</span>
-                    </a>
-                </top-nav>
-                <bottom-nav>
-                    <input type="checkbox" id="menu-toggle" hidden>
-                    <label for="menu-toggle" class="hamburger"
-                        aria-label="Toggle menu">
-                        <svg viewBox="0 0 100 40" width="30" height="30"
-                            aria-hidden="true">
-                            <rect width="100" height="10"></rect>
-                            <rect y="30" width="100" height="10"></rect>
-                            <rect y="60" width="100" height="10"></rect>
-                        </svg>
-                    </label>
-                    <ul class="menu">
-                        <li><a href="about.html">about</a></li>
-                        <li><a href="garden.html">garden</a></li>
-                        <li><a href="now.html">now</a></li>
-                        <li><a href="contact.html">contact</a></li>
-                        <li><a href="work.html">work</a></li>
-                        <button type="button" hidden data-theme-toggle>
-                            <img src="assets/icons/sun.svg"
-                                alt="Theme change button">
-                        </button>
-                    </ul>
-                </bottom-nav>
+                <ul>
+                    <li><a href="links.html">links</a></li>
+                    <li><a href="usual.html">usual</a></li>
+                    <li><a href="verify.html">verify</a></li>
+                    <li><a href="wish.html">wish</a></li>
+                </ul>
             </nav>
-        </header>
-        <main>
-            <div>
-                <main-header>
-                    <h2>/work</h2>
-                    <p>Here is a collection of my past works and projects.</p>
-                </main-header>
-                <form method="GET">
-                    <search>
-                        <label for="search-box">Search by title</label>
-                        <input id="search-box" name="query" type="search"
-                            placeholder="Look for a project...">
-                        <fieldset>
-                            <legend>Filter by tags</legend>
-                            <label><input type="checkbox" name="tags"
-                                    value="web">Web</label>
-                            <label><input type="checkbox" name="tags"
-                                    value="ai">AI</label>
-                            <label><input type="checkbox" name="tags"
-                                    value="music">Music</label>
-                            <label><input type="checkbox" name="tags"
-                                    value="other">Other</label>
-                        </fieldset>
-                        <button type="submit">Search</button>
-                    </search>
-                </form>
-                <section>
-                    <project-card>
-                        <a href="#project1">
-                            <picture>
-                                <source srcset media="(min-width: 800px)">
-                                <source srcset media="(min-width: 400px)">
-                                <img src alt="AI Machine Learning Dashboard">
-                            </picture>
-                            <div>
-                                <ul>
-                                    <li>AI</li>
-                                    <li>Web</li>
-                                </ul>
-                            </div>
-                            <h3>Smart Analytics Dashboard</h3>
-                            <p>A comprehensive machine learning dashboard built
-                                with Python and React, featuring real-time data
-                                visualization and predictive analytics.</p>
-                        </a>
-                    </project-card>
+            <p>&copy; 2025 William Widjaja</p>
+            <p>i'll take a browser cookie... and eat it</p>
+        </footer>
+    </main>
+</body>
 
-                    <project-card>
-                        <a href="#project2">
-                            <picture>
-                                <source srcset media="(min-width: 800px)">
-                                <source srcset media="(min-width: 400px)">
-                                <img src alt="Music Streaming Application">
-                            </picture>
-                            <div>
-                                <ul>
-                                    <li>Music</li>
-                                    <li>Web</li>
-                                </ul>
-                            </div>
-                            <h3>Harmony Stream</h3>
-                            <p>A modern music streaming platform with
-                                personalized playlists, social features, and
-                                high-quality audio playback using Web Audio
-                                API.</p>
-                        </a>
-                    </project-card>
-
-                    <project-card>
-                        <a href="#project3">
-                            <picture>
-                                <source srcset media="(min-width: 800px)">
-                                <source srcset media="(min-width: 400px)">
-                                <img src alt="Portfolio Website">
-                            </picture>
-                            <div>
-                                <ul>
-                                    <li>Web</li>
-                                </ul>
-                            </div>
-                            <h3>Interactive Portfolio</h3>
-                            <p>A responsive portfolio website showcasing
-                                creative projects with smooth animations and
-                                modern design principles.</p>
-                        </a>
-                    </project-card>
-
-                    <project-card>
-                        <a href="#project4">
-                            <picture>
-                                <source srcset media="(min-width: 800px)">
-                                <source srcset media="(min-width: 400px)">
-                                <img src alt="Task Management App">
-                            </picture>
-                            <div>
-                                <ul>
-                                    <li>Other</li>
-                                </ul>
-                            </div>
-                            <h3>TaskFlow Mobile</h3>
-                            <p>Cross-platform task management application built
-                                with React Native, featuring offline sync and
-                                collaborative workspaces.</p>
-                        </a>
-                    </project-card>
-                </section>
-            </div>
-            <footer>
-                <nav>
-                    <ul>
-                        <li><a href="links.html">links</a></li>
-                        <li><a href="usual.html">usual</a></li>
-                        <li><a href="verify.html">verify</a></li>
-                        <li><a href="wish.html">wish</a></li>
-                    </ul>
-                </nav>
-                <p>&copy; 2025 William Widjaja</p>
-                <p>i'll take a browser cookie... and eat it</p>
-            </footer>
-        </main>
-    </body>
 </html>
