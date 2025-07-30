@@ -138,7 +138,7 @@ div {
         }
     }
 
-    section {
+    #projects {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
         gap: 2rem;
@@ -252,6 +252,16 @@ div {
                     margin: 0;
                 }
             }
+        }
+    }
+
+    #load-buttons {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem 0;
+
+        button {
+            flex: 1;
         }
     }
 }

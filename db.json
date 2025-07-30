@@ -1,0 +1,33 @@
+{
+	"projects": [
+		{
+			"id": 1,
+			"title": "Personal Portfolio Website - Remote",
+			"description": "This is the remote version of what you would see on a backend.",
+			"link": "/",
+			"categories": "web",
+			"image": "assets/imgs/me.jpg"
+		},
+		{
+			"id": 2,
+			"title": "MemorySpot",
+			"description": "A Card-Based Location Sharing Web App",
+			"link": "https://cse110-sp25-group24.github.io/cse110-sp25-group24/",
+			"categories": [
+				"web"
+			],
+			"image": "https://raw.githubusercontent.com/cse110-sp25-group24/cse110-sp25-group24/refs/heads/main/source/assets/apple-touch-icon.png"
+		},
+		{
+			"id": 3,
+			"title": "Floor Manager",
+			"description": "A Discord bot for managing the \"floor\" for the Poker Tritons Discord server at UC San Diego.",
+			"link": "https://github.com/wwidjaja0/floor-manager",
+			"categories": [
+				"web",
+				"bot"
+			],
+			"image": "https://ugc.production.linktr.ee/1f2f5abd-744d-4563-a944-1ee1b3be84f7_Logo1024x1024.png?io=true&size=avatar-v3_0"
+		}
+	]
+}
