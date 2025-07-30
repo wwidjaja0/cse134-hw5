@@ -254,6 +254,16 @@ div {
             }
         }
     }
+
+    #load-buttons {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem 0;
+
+        button {
+            flex: 1;
+        }
+    }
 }
 
 /* Responsive design */
