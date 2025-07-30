@@ -1,0 +1,28 @@
+{
+	"projects": [
+		{
+			"id": 1,
+			"title": "Personal Portfolio Website",
+			"description": "A personal portfolio website showcasing my skills and projects.",
+			"categories": "web",
+			"image": "assets/imgs/portfolio.png"
+		},
+		{
+			"id": 2,
+			"title": "AI Chatbot",
+			"description": "An AI-powered chatbot for customer support.",
+			"categories": [
+				"ai",
+				"web"
+			],
+			"image": "assets/imgs/chatbot.png"
+		},
+		{
+			"id": 3,
+			"title": "Music Streaming App",
+			"description": "A web app for streaming and discovering new music.",
+			"categories": "music",
+			"image": "assets/imgs/music.png"
+		}
+	]
+}
