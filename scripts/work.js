@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		description: "This is the local version of what you would see on a backend.",
 		link: "/",
 		categories: "web",
-		image: "assets/imgs/portfolio.png"
+		image: "assets/imgs/me.jpg"
 	}, {
 		id: 2,
 		title: "MemorySpot",
