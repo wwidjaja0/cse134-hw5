@@ -81,22 +81,17 @@
                 <search>
                     <label for="search-box">Search by title</label>
                     <input id="search-box" name="query" type="search" placeholder="Look for a project...">
-                    <fieldset>
-                        <legend>Filter by tags</legend>
-                        <label><input type="checkbox" name="tags" value="web">Web</label>
-                        <label><input type="checkbox" name="tags" value="ai">AI</label>
-                        <label><input type="checkbox" name="tags" value="music">Music</label>
-                        <label><input type="checkbox" name="tags" value="other">Other</label>
-                    </fieldset>
                     <button type="submit">Search</button>
                 </search>
+                <div id="load-buttons">
+                    <button type="button" id="load-local">Load Local</button>
+                    <button type="button" id="load-remote">Load Remote</button>
+                </div>
             </form>
             <section>
-                <div id="load-buttons">
-                    <button id="load-local">Load Local</button>
-                    <button id="load-remote">Load Remote</button>
+                <div id="projects">
+                    <noscript>Please enable JavaScript to see my projects!</noscript>
                 </div>
-                <div id="projects"></div>
             </section>
         </div>
         <footer>
