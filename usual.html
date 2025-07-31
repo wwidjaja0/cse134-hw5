@@ -1,151 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Primary Meta Tags -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>usual • will widjaja</title>
-        <meta name="title" content="wid's usuals">
-        <meta name="description"
-            content="Get me the usual please.">
 
-        <!-- Open Graph -->
-        <meta property="og:url" content="https://wwidjaja.dev/">
-        <meta property="og:title" content="wid's usuals">
-        <meta property="og:description"
-            content="Get me the usual please.">
-        <meta property="og:image"
-            content="https://wwidjaja.dev/assets/imgs/opengraph.png">
+<head>
+    <!-- Primary Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>usual • will widjaja</title>
+    <meta name="title" content="wid's usuals">
+    <meta name="description" content="Get me the usual please.">
 
-        <!-- X (Twitter) -->
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:title" content="wid's usuals">
-        <meta property="twitter:description"
-            content="Get me the usual please.">
-        <meta property="twitter:image"
-            content="https://wwidjaja.dev/assets/imgs/opengraph.png">
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://wwidjaja.dev/">
+    <meta property="og:title" content="wid's usuals">
+    <meta property="og:description" content="Get me the usual please.">
+    <meta property="og:image" content="https://wwidjaja.dev/assets/imgs/opengraph.png">
 
-        <!-- Icons -->
-        <link rel="apple-touch-icon" sizes="180x180"
-            href="assets/icons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32"
-            href="assets/icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16"
-            href="assets/icons/favicon-16x16.png">
-        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="wid's usuals">
+    <meta property="twitter:description" content="Get me the usual please.">
+    <meta property="twitter:image" content="https://wwidjaja.dev/assets/imgs/opengraph.png">
 
-        <link rel="stylesheet" href="assets/css/main.css" media="screen">
-        <link rel="manifest" href="assets/icons/site.webmanifest">
-        <script src="scripts/main.js" defer></script>
-        <style>
-            /* to avoid "Default styles for h1 elements are changing" */
-            h1 {
-                font-size: 2.5rem;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <top-nav>
-                    <a id="brand" href="/">
-                        <img src="/favicon.ico" alt="Widjaja's Logo"
-                            width="48px"
-                            height="48px">
-                        <h1 hidden>William Widjaja</h1>
-                        <span><span>William</span> Widjaja</span>
-                    </a>
-                </top-nav>
-                <bottom-nav>
-                    <input type="checkbox" id="menu-toggle" hidden>
-                    <label for="menu-toggle" class="hamburger"
-                        aria-label="Toggle menu">
-                        <svg viewBox="0 0 100 40" width="30" height="30"
-                            aria-hidden="true">
-                            <rect width="100" height="10"></rect>
-                            <rect y="30" width="100" height="10"></rect>
-                            <rect y="60" width="100" height="10"></rect>
-                        </svg>
-                    </label>
-                    <ul class="menu">
-                        <li><a href="about.html">about</a></li>
-                        <li><a href="garden.html">garden</a></li>
-                        <li><a href="now.html">now</a></li>
-                        <li><a href="contact.html">contact</a></li>
-                        <li><a href="work.html">work</a></li>
-                        <button type="button" hidden data-theme-toggle>
-                            <img src="assets/icons/sun.svg"
-                                alt="Theme change button">
-                        </button>
-                    </ul>
-                </bottom-nav>
-            </nav>
-        </header>
-        <main>
-            <div>
-                <main-header>
-                    <h2>/usual</h2>
-                    <p>Want to know what to order for me? Have a look at my
-                        usuals.</p>
-                </main-header>
-                <section>
-                    <hgroup>
-                        <h3>In-N-Out Burger</h3>
-                        <img
-                            src="assets/imgs/innout-128x128.png"
-                            srcset="
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/main.css" media="screen">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="scripts/main.js" defer></script>
+    <style>
+        /* to avoid "Default styles for h1 elements are changing" */
+        h1 {
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a id="homepage" href="/">
+                <img class="spinner" src="/favicon.ico" alt="Widjaja's Logo" width="48px" height="48px">
+                <h1 hidden>William Widjaja</h1>
+                <span><span>William</span> Widjaja</span>
+            </a>
+            <bottom-nav>
+                <input type="checkbox" id="menu-toggle" hidden>
+                <label for="menu-toggle" class="hamburger" aria-label="Toggle menu">
+                    <svg viewBox="0 0 100 40" width="30" height="30" aria-hidden="true">
+                        <rect width="100" height="10"></rect>
+                        <rect y="30" width="100" height="10"></rect>
+                        <rect y="60" width="100" height="10"></rect>
+                    </svg>
+                </label>
+                <ul class="menu">
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="garden.html">garden</a></li>
+                    <li><a href="now.html">now</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="work.html">work</a></li>
+                    <button type="button" hidden data-theme-toggle>
+                        <img src="assets/icons/sun.svg" alt="Theme change button">
+                    </button>
+                </ul>
+            </bottom-nav>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <main-header>
+                <h2>/usual</h2>
+                <p>Want to know what to order for me? Have a look at my
+                    usuals.</p>
+            </main-header>
+            <section>
+                <hgroup>
+                    <h3>In-N-Out Burger</h3>
+                    <img src="assets/imgs/innout-128x128.png" srcset="
                                 assets/imgs/innout-32x32.png 32w,
                                 assets/imgs/innout-128x128.png 128w
-                            "
-                            sizes="(max-width: 600px) 32px, 128px"
-                            alt="In-N-Out Logo">
-                    </hgroup>
-                    <ol>
-                        <li>double double combo no onion (on the burger)</li>
-                        <li>replace the fries w/ animal fries</li>
-                        <li>medium pink lemonade</li>
-                    </ol>
-                    <hgroup>
-                        <h3>McDonalds</h3>
-                        <img
-                            src="assets/imgs/mcd-128x128.png"
-                            srcset="
+                            " sizes="(max-width: 600px) 32px, 128px" alt="In-N-Out Logo">
+                </hgroup>
+                <ol>
+                    <li>double double combo no onion (on the burger)</li>
+                    <li>replace the fries w/ animal fries</li>
+                    <li>medium pink lemonade</li>
+                </ol>
+                <hgroup>
+                    <h3>McDonalds</h3>
+                    <img src="assets/imgs/mcd-128x128.png" srcset="
                                 assets/imgs/mcd-32x32.png 32w,
                                 assets/imgs/mcd-128x128.png 128w
-                            "
-                            sizes="(max-width: 600px) 32px, 128px"
-                            alt="McDonalds Logo">
-                    </hgroup>
-                    <ol>
-                        <li>big mac meal</li>
-                        <li>medium fries</li>
-                        <li>medium unsweetened iced tea</li>
-                    </ol>
-                    <hgroup>
-                        <h3>Chick-fil-A</h3>
-                    </hgroup>
-                    <ol>
-                        <li>spicy chicken sandwich meal</li>
-                        <li>medium waffle fries OR medium mac and cheese</li>
-                        <li>medium sunjoy (1/2 sweet tea, 1/2 lemonade)</li>
-                    </ol>
-                </section>
-            </div>
-            <footer>
-                <nav>
-                    <ul>
-                        <li><a href="links.html">links</a></li>
-                        <li><a href="usual.html">usual</a></li>
-                        <li><a href="verify.html">verify</a></li>
-                        <li><a href="wish.html">wish</a></li>
-                    </ul>
-                </nav>
-                <p>&copy; 2025 William Widjaja</p>
-                <p>nom nom nom, call me mr. big back</p>
-                <noscript>This website's theme already automatically switches
-                    based on system preferences even though JavaScript is
-                    disabled.</noscript>
-            </footer>
-        </main>
-    </body>
+                            " sizes="(max-width: 600px) 32px, 128px" alt="McDonalds Logo">
+                </hgroup>
+                <ol>
+                    <li>big mac meal</li>
+                    <li>medium fries</li>
+                    <li>medium unsweetened iced tea</li>
+                </ol>
+                <hgroup>
+                    <h3>Chick-fil-A</h3>
+                </hgroup>
+                <ol>
+                    <li>spicy chicken sandwich meal</li>
+                    <li>medium waffle fries OR medium mac and cheese</li>
+                    <li>medium sunjoy (1/2 sweet tea, 1/2 lemonade)</li>
+                </ol>
+            </section>
+        </div>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="links.html">links</a></li>
+                    <li><a href="usual.html">usual</a></li>
+                    <li><a href="verify.html">verify</a></li>
+                    <li><a href="wish.html">wish</a></li>
+                </ul>
+            </nav>
+            <p>&copy; 2025 William Widjaja</p>
+            <p>nom nom nom, call me mr. big back</p>
+        </footer>
+    </main>
+</body>
+
 </html>
