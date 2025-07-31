@@ -89,7 +89,7 @@ function initForm() {
             inputEl.setCustomValidity(`Please only use characters valid for a ${elementName}!`);
         }
         else if (tooShort) {
-            inputEl.setCustomValidity(`${elementName} is too short!`);
+            inputEl.setCustomValidity(`Your ${elementName} is too short!`);
         }
         else {
             inputEl.setCustomValidity('');
@@ -107,7 +107,7 @@ function initForm() {
     function updateError(origin, errorMsg) {
         if (!(origin in errorOutput)) origin = 'default';
 
-        if (errorMsg) errorOutput[origin] = `${origin} field: ${errorMsg}`
+        if (errorMsg) errorOutput[origin] = `${errorMsg}`
         else errorOutput[origin] = '';
     }
 
